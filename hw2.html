@@ -14,43 +14,23 @@
       <span style="color: blue; font-family: Arial;">12</span>
       <span style="color: green; font-family: Impact;"><em>89</em></span>
     </p>
-    <script type="text/javascript">
-            var firstNumber, // first string entered by the user
-                secondNumber, // second string entered by the user
-                thirdNumber, // third string entered by the user
-                sum, // add the integers
-                average, // add the integers, divide by 3
-                product; // multiply the integers
+    
+    <p>
+      <form>
+        <label for="fnum">Frst Number</label><br>
+        <input type="number" value="" id="fnum"><br>
+        <label for="snum">Second Number</label><br>
+        <input type="number" id="snum">
+        <label for="tnum">Third Number</label><br>
+        <input type="number" value="" id="tnum"><br>
+        
+        
+      </form>
+      
 
-            // enter first number from user as a string
-            firstNumber = window.prompt("Enter first integer");
 
-            // enter second number from user as a string
-            secondNumber = window.prompt("Enter second integer");
 
-            // enter third number from user as a string
-            thirdNumber = window.prompt("Enter third integer");
-
-            // convert numbers from strings to integers
-            firstNumber = parseInt(firstNumber);
-            secondNumber = parseInt(secondNumber);
-            thirdNumber = parseInt(thirdNumber);
-            findLargNum(firstNumber,secondNumber,thirdNumber);
-
-            function findLargNum(firstNumber,secondNumber,thirdNumber){
-                //determine result
-                if (firstNumber > secondNumber) {
-                    if(firstNumber > thirdNumber) window.alert(firstNumber + " is largest");
-                }
-                else if(secondNumber > thirdNumber) window.alert(secondNumber + " is largest");
-                else window.alert(thirdNumber + " is largest");
-
-                var sum =  firstNumber + secondNumber + thirdNumber;
-                window.alert("the sum is " + sum); 
-                var average = (firstNumber + secondNumber + thirdNumber) / 3;
-                window.alert("the average is " + average);var product = firstNumber * secondNumber * thirdNumber;window.alert("the product is" + product);
-            }
-        </script>
+            
     
     <p><a href="index.html">Main Page</a>
       
