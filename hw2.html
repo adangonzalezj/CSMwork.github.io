@@ -4,6 +4,25 @@
     <meta charset="utf-8">
     <meta name="description" content="Adan assignments for JavaScript, AJAX course at College of San Mateo">
     <title> CIS 114 </title>
+    <script>
+      function process()
+      {
+        Var number1, number2, number3, number4;
+        
+        number1 = document.getElementBYId("num1").value;
+        number2 = document.getElementBYId("num2").value;
+        number3 = document.getElementBYId("num3").value;
+        
+        n1 = parseInt(number1);
+        n2 = parseInt(number2);
+        n3 = parseInt(number3);
+        
+        product = n1 * n2 * n3;
+        sum = n1 + n2 + n3;
+        average = (n1 + n2 + n3) / 3;
+        
+        document.getElementById("result").value = ("The inputted numbers were " + n1 + ", " + n2 + ", " +  n3 + "\nSum was " +  sum  + "\nAverage was " + average + "\nThe product of the integers was " + product)
+
   </head>
   <body>
     <H1> CIS 114 Homework 2 </H1>
