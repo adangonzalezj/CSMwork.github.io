@@ -14,25 +14,48 @@
     <script>
       function process()
       {
-        var number1, number2, number3, n1, n2, n3, sum, product, average;
+        var number1, number2, number3, number4, number5, n1, n2, n3, n4, n5, sum, product, average, smallest, largest;
         
         number1 = document.forms["myform"].elements["num1"].value;
         number2 = document.forms["myform"].elements["num2"].value;
         number3 = document.forms["myform"].elements["num3"].value;
+        number4 = document.forms["myform"].elements["num4"].value;
+        number5 = document.forms["myform"].elements["num5"].value;
         
         n1 = parseInt(number1);
         n2 = parseInt(number2);
         n3 = parseInt(number3);
+        n4 = parseInt(number4);
+        n5 = parseInt(number5);
         
         product = n1 * n2 * n3;
         sum = n1 + n2 + n3;
         average = (n1 + n2 + n3) / 3;
+        
+        if (num1 > num2 && num1 > num3) {
+          largest = num1;
+        } else if (num2 > num1 && num2 > num3) {
+          largest = num2;
+        } else {
+          largest = num3
+        }
+        //Checking the smallest value
+        
+        if (num1 < num2 && num1 < num3) {
+          smallest = num1;
+        } else if (num2 < num1 && num2 < num3) {
+          smallest = num2;
+        } else {
+          smallest = num3;
+        }
         
         
         
         document.forms["myform"].elements["result1"].value = sum;
         document.forms["myform"].elements["result2"].value = average;
         document.forms["myform"].elements["result3"].value = product;
+        document.forms["myform"].elements["result4"].value = smallest;
+        document.forms["myform"].elements["result5"].value = largest;
         
       }
     </script>
@@ -78,11 +101,11 @@
         </tr>
         <tr>
           <td>Smallest is:</td>
-          <td><input type="text" name="result2" size="10" readonly></td>
+          <td><input type="text" name="result4" size="10" readonly></td>
         </tr>
         <tr>
           <td>Largest is:</td>
-          <td><input type="text" name="result2" size="10" readonly></td>
+          <td><input type="text" name="result5" size="10" readonly></td>
         </tr>
         
         
