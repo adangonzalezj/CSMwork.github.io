@@ -19,12 +19,15 @@
         number1 = document.forms["myform"].elements["num1"].value;
         number2 = document.forms["myform"].elements["num2"].value;
         number3 = document.forms["myform"].elements["num3"].value;
+        number4 = document.forms["myform"].elements["num4"].value;
+        number5 = document.forms["myform"].elements["num5"].value;
         
         
         n1 = parseInt(number1);
         n2 = parseInt(number2);
         n3 = parseInt(number3);
-       
+        n4 = parseInt(number4);
+        n5 = parseInt(number5);
         
         
         product = n1 * n2 * n3;
@@ -41,12 +44,8 @@
         document.forms["myform"].elements["result2"].value = average;
         document.forms["myform"].elements["result3"].value = product;
         
-        
-        console.log(min);
-        console.log(max);
-        
-        
-  
+        document.forms["myform"].elements["result4"].value = min;
+        document.forms["myform"].elements["result5"].value = max;
         
         
         
@@ -95,11 +94,11 @@
         </tr>
         <tr>
           <td>Smallest is:</td>
-          <td><input type="text" name="min" size="10" readonly></td>
+          <td><input type="text" name="result4" size="10" readonly></td>
         </tr>
         <tr>
           <td>Largest is:</td>
-          <td><input type="text" name="max" size="10" readonly></td>
+          <td><input type="text" name="result5" size="10" readonly></td>
         </tr>
         
         
