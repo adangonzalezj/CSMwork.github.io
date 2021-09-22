@@ -72,18 +72,14 @@
         }
       }
       const handleGrades = (total, letter) => {
-        document.getElementById("result").value = (`
-        Student Final Average: ${total} ${letter} 
-        `);
+        document.getElementById("result").value = (`Student Final Average: ${total} ${letter}`);
 
         document.getElementById("error").innerHTML = ""
 
       }
       const handleGradesDandF = (total, letter) => {
-        document.getElementById("result").value = (`
-        Student Final Average: ${total} ${letter} 
-        Student must retake the course`
-        );
+        document.getElementById("result").value = (`Student Final Average: ${total} ${letter} 
+        Student must retake the course`);
 
         document.getElementById("error").innerHTML = ""
       }
