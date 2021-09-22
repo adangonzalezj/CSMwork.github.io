@@ -107,29 +107,44 @@
     <header>
       <h1>Part 1</h1>
     </header>
-    <div class="form-style">
+    <table>
+      <div class="form-style">
       <h1><strong>Students Grades</strong></h1>
       <form name="my-form">
-        <label><strong>Homework score:</strong></label>
-        <input type="number" id="hw-score" name="num1" autofocus><br>
-
-        <label><strong>Min-term score:</strong></label>
-        <input type="number" id="mt-score" name="num2"><br>
-
-        <label><strong>Final Exam score:</strong></label>
-        <input type="number" id="fn-score" name="num3"><br>
-
-        <label><strong>Participation score:</strong></label>
-        <input type="number" id="p-score" name="num3"><br>
-
-        <input type="text" id="result" placeholder="Result" readonly 
-               style="height: fit-content;">
-        <input type="button" id="fadein-result" onclick="studentGrades()" value="Submit">
-
-        <input type="reset" onclick="resetResult()" value="Reset">
-      </form>
-      <div id="error"></div>
-    </div>
+        <tr>
+          <label><strong>Homework score:</strong></label>
+          <input type="number" id="hw-score" name="num1" autofocus><br>
+        </tr>
+        
+        <tr>
+          <label><strong>Min-term score:</strong></label>
+          <input type="number" id="mt-score" name="num2"><br>
+        </tr>
+        
+        <tr>
+          <label><strong>Final Exam score:</strong></label>
+          <input type="number" id="fn-score" name="num3"><br>
+        </tr>
+          
+        <tr> 
+          <label><strong>Participation score:</strong></label>
+          <input type="number" id="p-score" name="num3"><br>
+        </tr>
+        
+        <tr>
+          <input type="text" id="result" placeholder="Result" readonly 
+                 style="height: fit-content;">
+          <input type="button" id="fadein-result" onclick="studentGrades()" value="Submit">
+        </tr> 
+        
+        <tr>
+          <input type="reset" onclick="resetResult()" value="Reset">
+        </tr>
+        
+        </form>
+        <div id="error"></div>
+      </div>
+    </table>
     
     <p><a href="index.html">Main Page</a></p>
   </body>
