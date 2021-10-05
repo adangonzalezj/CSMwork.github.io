@@ -25,15 +25,20 @@
         <form>
           <tr>
             <label><strong>5 * 9 * 13 * 17 * 21 * 25:</strong></label>
-            <input type="number" id="hw-score" name="num1" autofocus><br>
+            <input type="text" id="multi-num" name="num1" autofocus><br>
           </tr>
           <br>
         
           <tr>
             <label><strong>5 + 9 + 13 + 17 + 21 + 25:</strong></label>
-            <input type="number" id="mt-score" name="num2"><br>
+            <input type="text" id="add-num" name="num2"><br>
           </tr>
           <br>
+          
+          <tr>
+          <input type="button" id="fadein-result" onclick="mathResults()" value="Generate">
+          </tr>
+              
           
         </form>
       </div>
