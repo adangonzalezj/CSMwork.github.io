@@ -13,19 +13,14 @@
     
     <script>
       
-      function process(){
- 
-      var sum = 0;
-      var multi = 1;
-      var number1, number2, n1, n2;
+      const math = () => {
+        var sum = 0;
+        var multi = 1;
+        
+        let sum = document.getElementById("addition").value;
+        let multi = document.getElementById("multiplication").value;
       
-      number1 = document.forms["myform"].elements["num1"].value;
-      number2 = document.forms["myform"].elements["num2"].value;
       
-      n1 = parseInt(number1);
-      n2 = parseInt(number2);
-   
-
       for (var i = 5; i <= 25; i += 4)
       {
         sum += i;
@@ -33,12 +28,7 @@
           
       }
       
-      document.forms["myform"].elements["result1"].value = sum;
-      document.forms["myform"].elements["result2"].value = multi;
       
-      
-      document.writeln( "<br>5 + 9 + 13 + 17 + 21 + 25: " +sum);
-        
       }
         
     </script>
@@ -60,18 +50,18 @@
         
         <table>
         <tr>
-          <td>First Number:</td>
-          <td><input type="number" name="num1" size="10" readonly></td>
+          <td>5 + 9 + 13 + 17 + 21 + 25 is :</td>
+          <td><input type="text" name="addition" size="10" readonly></td>
         </tr>
         
         <tr>
-          <td>Second Number:</td> 
-          <td><input type="number" name="num2" size="10" readonly></td>
+          <td>5 * 9 * 13 * 17 * 21 * 25: </td> 
+          <td><input type="text" name="multiplicaiton" size="10" readonly></td>
         </tr>
         </table>
         
         <br><br>
-        <input type="button" onclick="process()" value="SUBMIT">
+        <input type="button" onclick="math" value="SUBMIT">
         <input type="reset" value="RESET">
         
       </form>
