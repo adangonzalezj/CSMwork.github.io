@@ -13,10 +13,21 @@
     
     <script>
       
-      var a = 5221125;
-      var num1 = a.toString();
-      var b = 90;
-      var num2 = b.toString();
+      function process(){
+      
+        var sum = 0;
+        var multi = 0;
+        
+        for (var number = 5; number <= 25; number += 4){
+          sum += number;
+          multi *= number;
+        
+        
+          document.forms["myform"].elements["result1"].value = sum;
+          document.forms["myform"].elements["result2"].value = multi;
+        
+      }
+      
       
       
     </script>
@@ -30,9 +41,12 @@
     </header>
     
     <h2>Part 1a</h2>
-    <table>
+    
+    <form name = "form1">
+      <table>
+      
       <div>
-        <form>
+        
           <tr>
             <label><strong>5 * 9 * 13 * 17 * 21 * 25:</strong></label>
             <input type="text" id="multi-num" name="num1" autofocus><br>
@@ -46,17 +60,18 @@
           <br>
           
           <tr>
-          <input type="button" id="fadein-result" onclick="mathResults()" value="Generate">
+            <input type="button" id="fadein-result" onclick="mathResults()" value="Generate">
+            <input type="reset" value="RESET">
           </tr>
           
           <tr>
-          <input type="reset" onclick="resetResult()" value="Reset">
+            <input type="reset" value="RESET">
           </tr>
               
-          
-        </form>
       </div>
-    </table>
+        
+      </table>
+    </form>
         
       
   </body>
