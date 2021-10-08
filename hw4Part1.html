@@ -13,19 +13,28 @@
     
     <script>
  
+      var sum = 0;
+      var multi = 1;
+      var number1, number2;
       
-        var sum = 0;
-        var multi = 1;
-        
-        for (var number = 5; number <= 25; number += 4)
-        {
-          sum += number;
-          multi *= number;
+      number1 = document.forms["myform"].elements["num1"].value;
+      number2 = document.forms["myform"].elements["num2"].value;
+      
+      n1 = parseInt(number1);
+      n2 = parseInt(number2);
+   
+
+      for (var i = 5; i <= 25; i += 4)
+      {
+        sum += i;
+        multi *= i;
           
-        
-        }
+      }
       
-      document.writeln( '<br>5 * 9 * 13 * 17 * 21 * 25: ' *multi);
+      document.forms["myform"].elements["result1"].value = +sum;
+      document.forms["myform"].elements["result2"].value = *multi;
+      
+      
       document.writeln( "<br>5 + 9 + 13 + 17 + 21 + 25: " +sum);
         
     </script>
@@ -42,8 +51,23 @@
     
     <h2>Part 1a</h2>
     
-    <div>document.writeln( "<br>5 + 9 + 13 + 17 + 21 + 25: " +sum);
-    </div>
+    <section class = "body">
+      <form name = "myform">
+        
+        <table>
+        <tr>
+          <td>First Number:</td>
+          <td><input type="text" name="num1" size="10"></td>
+        </tr>
+        
+        <tr>
+          <td>Second Number:</td> 
+          <td><input type="text" name="num2" size="10"></td>
+        </tr>
+        </table>
+        
+      </form>
+    </section>
     
 
         
