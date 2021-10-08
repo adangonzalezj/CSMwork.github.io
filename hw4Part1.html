@@ -22,12 +22,11 @@
           sum += number;
           multi *= number;
           
-          consol.log("5 * 9 * 13 * 17 * 21 * 25: " *number);
-          consol.log("5 + 9 + 13 + 17 + 21 + 25: " +number);
-          
         
         }
-        
+      
+      document.writeln( "<br>5 * 9 * 13 * 17 * 21 * 25: " + number );
+      document.writeln( "<br>5 + 9 + 13 + 17 + 21 + 25: " * number );
         
     </script>
     
@@ -46,23 +45,11 @@
     <section>
     <form name = "form1">
       <table>
-        <tr>
-          <td>5 * 9 * 13 * 17 * 21 * 25:</td>
-          <td><input type="text" id="multi" name="multi" size="10" readonly></td>
-        </tr>
-        <br>
-        
-        <tr>
-          <td>5 + 9 + 13 + 17 + 21 + 25:</td>
-          <input type="text" id="sum" name="sum" size="10" readonly></td>
-      </tr>
+     
       
       </table>
           
-         
-            <input type="button" onclick="process()" value="SUBMIT">
-            <input type="reset" value="RESET">
-          
+
               
         
       
