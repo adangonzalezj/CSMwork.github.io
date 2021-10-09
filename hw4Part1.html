@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,34 +9,7 @@
       input {text-align: center;}
       body {background-color: #f5f5dc;}
       .body { width: 550px; margin: 0px auto;}   
-    </style>
-    
-    <script>
-      
-      const math = () => {
-        var sum = 0;
-        var multi = 1;
-        
-        
-        sum = document.getElementById("addition").value;
-        multi = document.getElementById("multiplication").value;
-        
-      
-      
-      for (var i = 5; i <= 25; i += 4)
-      {
-        sum += i;
-        multi *= i;
-          
-      }
-
-      
-      }
-        
-    </script>
-    
- 
-    
+    </style> 
     
   </head>
   
@@ -46,31 +19,58 @@
     </header>
     
     <h2>Part 1a</h2>
-    
-    <section class = "body">
-      <form name = "myform">
-        
-        <table>
-        <tr>
-          <td>5 + 9 + 13 + 17 + 21 + 25: </td>
-          <td><input type="text" id= "addition" name="num1" size="10" readonly></td>
-        </tr>
-        
-        <tr>
-          <td>5 * 9 * 13 * 17 * 21 * 25: </td> 
-          <td><input type="text" id="multiplicaiton" name="num1" size="10" readonly></td>
-        </tr>
-        </table>
-        
-        <br><br>
-        <input type="button" onclick="math" value="SUBMIT">
-        <input type="reset" value="RESET">
-        
-      </form>
-    </section>
-    
+    <p>
 
+    </p>
+    <script>
+    
+          var sum = 0;
+          var multi = 1;
         
+        for (var number = 5; number <= 25; number += 4)
+        {
+          sum += number;
+          multi *= number;
+            
+        }
+
+        document.write("5 + 9 + 13 + 17 + 21 + 25: " +sum);
+        document.write("<br>" );
+
+        fn = multi.toLocaleString();
+     
+        document.write("5 * 9 * 13 * 17 * 21 * 25: " +fn);
+        
+        
+        
+        
+      </script>
+
+      <br>
+      <br>
       
+      <h2>Part 1b</h2>
+      <script>
+          var x = 3;
+          var sum2 = 0;
+          var multi2 = 1
+          
+          while (x <= 18)
+          {
+              sum2 += x;
+              multi2 *= x;
+              x += 3;
+              
+            }
+            
+            document.write("3 + 6 + 9 + 12 + 15 + 18: " +sum2);
+            document.write("<br>" );
+
+            fn2 = multi.toLocaleString();
+            
+            document.write("3 * 6 * 9 * 12 * 15 * 18: " +fn2);
+
+      </script>
+    
   </body>
 </html>
