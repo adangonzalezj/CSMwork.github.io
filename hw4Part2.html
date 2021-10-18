@@ -9,11 +9,43 @@
       input {text-align: center;}
       body {background-color: #f5f5dc;}
       .body { width: 550px; margin: 0px auto;}   
-    </style>
+    </style>  
     
-  </head>
-  
-  <body>
+</head>
+
+<body>
+    <script>
+    
+    var amount; // Current amount of money
+    var principal = 1000.0; // Principal amount
+    
+    for ( var rate = 5; rate <= 7; rate++ )
+    {
+        // Begin table and table header
+        document.writeln( "<table border=\"1\">");
+        document.writeln( "<caption>$1000 Principal     Compound Interest For Rate of " + rate + "%     </caption>" );
+        document.writeln( "<thead><tr><th>Year</th>     <th>Amount on Deposit</th>   <th>Interest Rate</th></tr></thead>" );
+        
+        // Begin table body
+        document.writeln( "<tbody>" );
+                
+        // Calculate amount for 10 years of deposit     at current rate
+        
+        for ( var year = 1; year <= 10; ++year )
+        {
+            amount = principal * Math.pow( 1.0 + rate, year );
+            
+            if ( year !== 0 )
+            document.writeln( "<tr><td>" + year + "</td><td>" + amount.toFixed(2) +"</td><td>" + rate + "</td></tr>" );
+            
+            else
+            document.writeln( "<tr><td>" + year + "</td><td>" + amount.toFixed(2) + "</td></tr>" );
+        } // End for loop
+        
+        document.writeln( "</tbody></table>" );
+    } // End for loop
+    
+    </script> 
+    
   </body>
-  
 </html>
