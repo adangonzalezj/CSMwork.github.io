@@ -37,7 +37,9 @@
         
         for ( var year = 1; year <= 10; ++year )
         {
-            amount = principal * Math.pow( 1.0 + rate, year );
+            amount = year.toLocaleString("en-Us", { style: 'currency', currency: 'USD'} principal * Math.pow( 1.0 + rate, year );
+            
+          
             
             if ( year !== 0 )
             document.writeln( "<tr><td>" + year + "</td><td>" + amount.toFixed(2) +"</td><td>" + rate.toFixed(2) + "</td></tr>" );
