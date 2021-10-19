@@ -16,11 +16,14 @@
 
 <body>
     <script>
+      
+      var amount; 
+      var principal = 1000.0;
+      
+ 
+
     
-    var amount; 
-    var principal = 1000.0; 
-    
-    for ( var rate = 5; rate <= 7; rate++ )
+    for ( var rate = .05; rate <= 7; rate++ )
     {
         // Began table and table header
         document.writeln( "<table>");
@@ -40,9 +43,11 @@
             document.writeln( "<tr><td>" + year + "</td><td>" + amount.toFixed(2) +"</td><td>" + rate + "</td></tr>" );
             
         } 
+      
         
         document.writeln( "</tbody></table>" );
-    } 
+    }
+      
       
     
     </script>
