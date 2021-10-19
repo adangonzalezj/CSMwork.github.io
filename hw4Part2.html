@@ -42,7 +42,8 @@
           
             
             if ( year !== 0 )
-            document.writeln( "<tr><td>" + year + "</td><td>" + amount.toFixed(2) +"</td><td>" + rate.toFixed(2) + "</td></tr>" );
+            document.writeln( "<tr><td>" + year + "</td><td>" + ${amount.toLocaleString(undefined,
+        { 'minimumFractionDigits': 2, 'maximumFractionDigits': 2 })} +"</td><td>" + rate.toFixed(2) + "</td></tr>" );
             
         } 
       
