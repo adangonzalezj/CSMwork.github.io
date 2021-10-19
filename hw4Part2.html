@@ -37,7 +37,7 @@
         
         for ( var year = 1; year <= 10; ++year )
         {
-            amount = year.toLocaleString("en-Us", { style: 'currency', currency: 'USD'}, principal * Math.pow( 1.0 + rate, year ) );
+            amount = principal * Math.pow( 1.0 + rate, year );
             
           
             
