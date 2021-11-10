@@ -11,17 +11,17 @@
     </style>
 
     <script>
-    // Validating the checkBox
+ 
     
     const formOne = () => {
         let userInput = document.getElementById("userInput").value;
         
-        // Check box
+
         let checkBox1 = document.getElementById("checkBox1").checked;
         let checkBox2 = document.getElementById("checkBox2").checked;
         let checkBox3 = document.getElementById("checkBox3").checked;
         
-        // Radios
+   
         
         let option1 = document.getElementById("option1").checked;
         let option2 = document.getElementById("option2").checked;
@@ -49,20 +49,19 @@
     
     const submitSuccess = () => {
         document.getElementById("success").innerHTML = `<p>Successfull submission</p> `;
-        
-        //Clean errors
+      
         document.getElementById("error").innerHTML = ""
         
-        //Input
+  
         document.getElementById("userInput").value = "";
         
-        // radio
+      
         
         document.getElementById("option1").checked = false;
         document.getElementById("option2").checked = false;
         document.getElementById("option3").checked = false;
         
-        // Check box
+      
         document.getElementById("checkBox1").checked = false;
         document.getElementById("checkBox2").checked = false;
         document.getElementById("checkBox3").checked = false;
