@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Empty Page </title>
-    <H1> Arrays </H1>
+    <title>CIS 114</title>
+    <H1>Part 2</H1>
     
     <style>
       input {text-align: center;}
@@ -13,7 +13,53 @@
   </head>
   <body>
     <script>
+    
+    function dropDown1(){
+        var url = document.getElementById('dropmenu1').value;
+         window.location = url;
+        }
+        
+        function dropDown2(){
+            var url = document.getElementById('dropmenu2').value;
+            window.location = url;
+        }
     </script>
+    
+    <form>
+        <h2>onchange Module</h2>
+        <p>
+            <select id="dropmenu1" onchnge = "dropDown1()">
+                <option value=""selected>Pick a Coach</option>
+                <option value="https://www.ricksongracie.com">Rickson Grsacie</option>
+                <option value="https://en.wikipedia.org/wiki/Khabib_Nurmagomedov">Khabib Nurmagomedov</option>
+                <option value="https://en.wikipedia.org/wiki/Canelo_%C3%81lvarez">Saul "Canelo" Alvarez</option>
+              </select>
+
+              <p><input type="button" id="fadein-result" onclick="dropDown1()" value="Submit"></p>
+              
+
+        </p>
+        <br>
+        <br>
+        <br>
+
+        <h2>onclick Module</h2>
+        <p>
+            <select id="dropmenu2" onclick = "dropDown2()">
+                <option value = "https://www.ricksongracie.com" onclick = "dropDown2()">Rickson Gracie</option>
+                <option value = "https://en.wikipedia.org/wiki/Khabib_Nurmagomedov" onclick = "dropDown2()">Khabib Nurmagomedo</option>
+                <option value = "https://en.wikipedia.org/wiki/Canelo_%C3%81lvarez" onclick = "dropDown2()">Saul "Canelo" Alvarez</option>
+                
+            </select>
+        </p>
+        <br>
+        <br>
+
+        
+    </form>
+    <p><a href="hw5.html">Assignment 5</a>
+    <p><a href="hw5Part1.html">Part 1</a>
+    <p><a href="hw5Part3.html">Part 3</a>
     <p><a href="index.html">Main Page</a>
   </body>
 </html>
