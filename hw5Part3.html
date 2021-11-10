@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Empty Page </title>
-    <H1> Arrays </H1>
+    <title>CIS 114</title>
+    <H1>Part 3</H1>
     
     <style>
       input {text-align: center;}
@@ -11,9 +11,103 @@
     </style>
     
   </head>
-  <body>
-    <script>
+  <script>
+    var stateArray = [ ["AL", "ALABAMA", "4,903,185", "Montgomery"],                     
+                ["AK", "ALASKA", "731,545", "Juneau"],  
+                ["AZ", "ARIZONA", "7,278,717", "Pheonix"],
+                ["AR", "ARKANSAS", "3,017,835", "Little Rock"] ];
+  
+    
+    function ButtonPressed()
+      {   
+        var searchKey = document.forms["SearchForm"].elements["inputPopVal"].value; 
+        searchKey = searchKey.toUpperCase();     
+        var found = false;
+        for (var row = 0; row < stateArray.length; row++)
+         {
+         if ((stateArray[row][0] == searchKey) || (stateArray[row][1] == searchKey))
+    
+                    
+         { 
+    
+           document.forms["SearchForm"].elements["population"].value = stateArray[row][2];
+           document.forms["SearchForm"].elements["capitol"].value = stateArray[row][3];  
+           row = stateArray.length;   
+         }
+        }
+    
+      if ( found == false ) {
+       document.forms["SearchForm"].elements["capitol"].value= "State not available, try again!"; 
+           }
+    
+      }
     </script>
+    
+
+ 
+  <body>
+    <section class="body">
+
+        <h2>State Information From 2019 Census</h2>
+        
+        <h3>Instructions</h3>
+        
+        <p>Enter a State name (lower or upper case is ok) in the field next to the
+        State Info button</p>
+        <br><br>
+        
+        <table>
+        <tr>
+        <td>AL</td>	
+        <td>Alabama</td>	
+        <td>Montgomery</td>		
+        <td>4,903,185</td>	
+        </tr>
+        
+        <tr>
+        <td>AK</td>	
+        <td>Alaska</td>	
+        <td>Juneau</td>		
+        <td>731,545</td>	
+        </tr>
+        
+        <tr>
+        <td>AZ</td>
+        <td>Arizona</td>	
+        <td>Pheonix</td>	
+        <td>7,278,717</td>		
+        
+        </tr>
+        
+        <tr>
+        <td>AR</td>
+        <td>Arkansas</td>	
+        <td>Little Rock</td>	
+        <td>3,017,835</td>		
+	
+        </tr>
+
+        </table>
+        
+        <br>
+        
+        <form name="SearchForm">
+        <input type="text" size="15" name="inputPopVal" autofocus> 
+        <input onclick="ButtonPressed();" type="button" value="State Info" name="search" id="search">
+        
+        <br><br>
+        
+        <label for="population">Population</label><br>
+        <input type="text" size="15" name="populaiton" id="population"><br><br>
+        <label for="capitol">Capitol</label><br>
+        <input type="text" size="35" name="capitol" id="capitol"><br><br>
+        <input type="reset" value="Reset" onclick="location.reload();">
+        </form>
+        
+        </section>
+    <p><a href="hw5.html">Assignment 5</a>
+    <p><a href="hw5Part1.html">Part 1</a>
+    <p><a href="hw5Part2.html">Part 2</a>   
     <p><a href="index.html">Main Page</a>
   </body>
 </html>
