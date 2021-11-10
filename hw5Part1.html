@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Empty Page </title>
+    <title>CIS 114</title>
     <H1> Arrays </H1>
     
     <style>
@@ -9,11 +9,137 @@
       body {background-color: #f5f5dc;}
       .body { width: 550px; margin: 0px auto;}   
     </style>
-    
-  </head>
-  <body>
+
     <script>
+    // Validating the checkBox
+    
+    const formOne = () => {
+        let userInput = document.getElementById("userInput").value;
+        
+        // Check box
+        let checkBox1 = document.getElementById("checkBox1").checked;
+        let checkBox2 = document.getElementById("checkBox2").checked;
+        let checkBox3 = document.getElementById("checkBox3").checked;
+        
+        // Radios
+        
+        let option1 = document.getElementById("option1").checked;
+        let option2 = document.getElementById("option2").checked;
+        let option3 = document.getElementById("option3").checked;
+        
+        let selection = document.getElementById("selection");
+        
+        if ((checkBox1 || checkBox2 || checkBox3)
+        
+        && (option1 || option2 || option3)
+        && (seleciton.selectedIndex !== 0) && (userInput !== "")) {
+            submitSuccess()
+        } else {
+            submitError();
+        }
+        
+
+    }
+        
+    
+    const submitError = () => {
+        document.getElementById("error").innerHTML = `<p>Complete all fields</p> `;
+        document.getElementById("success").innerHTML = "";
+    }
+    
+    const submitSuccess = () => {
+        document.getElementById("success").innerHTML = `<p>Successfull submission</p> `;
+        
+        //Clean errors
+        document.getElementById("error").innerHTML = ""
+        
+        //Input
+        document.getElementById("userInput").value = "";
+        
+        // radio
+        
+        document.getElementById("option1").checked = false;
+        document.getElementById("option2").checked = false;
+        document.getElementById("option3").checked = false;
+        
+        // Check box
+        document.getElementById("checkBox1").checked = false;
+        document.getElementById("checkBox2").checked = false;
+        document.getElementById("checkBox3").checked = false;
+
+        document.getElementById("selection").selectedIndex = 0;
+    }
+
+        
     </script>
+        
+    </head>
+    
+    <body>
+
+    <div>
+
+        <div>
+    
+            <h1>Part 1</h1>
+            <form>
+                <label> Enter a name </label>
+                <input type="text" id="userInput" required />
+    
+                <br />
+                <p>Select Skill Level</p>
+                <input type="radio" id="option1" name="skill" value="option1">
+                <label for="option1">Beginner</label><br>
+                <input type="radio" id="option2" name="skill" value="option2">
+                <label for="option2">intermediate</label><br>
+                <input type="radio" id="option3" name="skill" value="option3">
+                <label for="option3">Expert</label><br>
+    
+                <p>Select Martial Art(s)</p>
+                <input type="checkbox" id="checkBox1" name="option1" value="checkBox1">
+                <label for="checkBox1"> Jiu Jitsu</label><br>
+                <input type="checkbox" id="checkBox2" name="option" value="checkBox2">
+                <label for="checkBox2"> Wrestling</label><br>
+                <input type="checkbox" id="checkBox3" name="option" value="checkBox3">
+                <label for="checkBox3"> Boxing</label><br><br>
+    
+    
+                <label for="selection">Perferred Coach / Intructor</label><br>
+                <select name="selection" id="years" required>
+                    <option value="">None</option>
+                    <option value="">Rickson Gracie</option>
+                    <option value="">Khabib Nurmagomedov</option>
+                    <option value="">Saul "Canelo" Alvarez</option>
+                    
+                </select>
+    
+                <br>
+    
+                <input type="button" value="Submit" onclick="formOne()">
+    
+            </form>
+            <div id="error">
+    
+            </div>
+    
+            <div id="success">
+    
+            </div>
+            
+    
+            
+    
+        </div>
+    
+    
+    
+    
+    </div>
+    
+    </div>
+    <p><a href="hw5.html">Assignment 5</a>
+    <p><a href="hw5Part2.html">Part 2</a>
+    <p><a href="hw5Part3.html">Part 3</a>
     <p><a href="index.html">Main Page</a>
   </body>
 </html>
