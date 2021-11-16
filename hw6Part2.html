@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS 114</title>
+    <h1>Objects Part 2</h1>
+</head>
+
+<style>
+    input {text-align: center;}
+    body {background-color: #f5f5dc;}
+    .body { width: 550px; margin: 0px auto;} 
+</style>
+
+<script>
+
+    function myFunction() {
+        var str = document.getElementById("textArea").value;
+        var ch = document.getElementById("char").value;
+    
+        var matchesCount = str.split(ch).length - 1;
+    
+        var win = window.open("", "Output", "width=480,height=200");
+        if (matchesCount < 1) {
+            win.document.body.innerHTML = 'Match not found for search character ' + char;
+        } else {
+            win.document.body.innerHTML = 'search character ' + char + ' matched for ' + matchesCount + ' times.';
+        }
+    }
+    
+</script>
+
+
+
+<body>
+    <label>Enter String:</label>
+    <br>
+    <textarea width="200px" rows = "4" id="textArea"></textarea>
+    <br>
+    
+    <label>Enter Character(s):</label>
+    <br><input id='char'>
+    <br>
+    
+    <button id="submit" onclick="myFunction()">Submit</button>
+    
+</body>
+</html>
