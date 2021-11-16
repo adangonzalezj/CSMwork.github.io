@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS 114</title>
+    <h1>Objects Part 1</h1>
+</head>
+
+<style>
+    input {text-align: center;}
+    body {background-color: #f5f5dc;}
+    .body { width: 550px; margin: 0px auto;}   
+  </style> 
+
+<script>
+
+const submitNum = () => {
+    const integer = document.getElementById('num').value;
+    const checkDec = integer.split(".");
+    
+    if (checkDec[1] === undefined || checkDec[1].length < 4) {
+        errorHandle();
+    } 
+    else {
+        errorDecimal()
+        result(integer);
+    }
+}
+
+const errorHandle = () => {
+    document.getElementById('error').innerHTML = "Enter a number with at least 4 decimal position";
+    document.getElementById('result').innerHTML = "";
+}
+
+const errorDecimal = () => {
+    document.getElementById('error').innerHTML = " ";
+}
+
+const clear = () => {
+    document.getElementById('error').innerHTML = "";
+    document.getElementById('result').innerHTML = "";
+    document.getElementById('num').value = "";
+}
+const result = (integer) => {
+    var tenthPosition = parseFloat(integer).toFixed(1);
+    var hundredthsPosition = parseFloat(integer).toFixed(2);
+    var thousandthsPosition = parseFloat(integer).toFixed(3);
+    document.getElementById('result').innerHTML = `
+    
+    A) Nearest Integer: ${Math.round(integer)}
+    B) Square Root: ${parseInt(Math.sqrt(integer))}
+    C) Tenths Position: ${tenthPosition}
+    D) Hundredths Position: ${hundredthsPosition}
+    E) Thousandths Position: ${thousandthsPosition}`
+    
+    document.getElementById('num').value = "";
+    }
+
+</script>
+
+
+<body>
+    <form>
+        <label> Enter A Number </label>
+        <input type="number" id="num" required />
+        <p id="error"></p>
+
+        <br>
+
+        <button type="submit" onclick="submitNum()">Submit</button>
+        <button type="reset" onclick="clear()">Clear</button>
+        <br>
+        <br>
+
+        
+        <label for="option1">Answer</label><br>
+        <textarea rows="4" id="result" readonly></textarea>
+        
+
+
+        </select>
+
+        <br>
+
+    </form>
+
+  
+</body>
+</html>
