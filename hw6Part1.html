@@ -30,7 +30,7 @@ const submitNum = () => {
 }
 
 const errorHandle = () => {
-    document.getElementById('error').innerHTML = "Enter a number with at least 4 decimal position";
+    document.getElementById('error').innerHTML = "Enter a number with at least 4 decimal spots";
     document.getElementById('result').innerHTML = "";
 }
 
@@ -38,22 +38,17 @@ const errorDecimal = () => {
     document.getElementById('error').innerHTML = " ";
 }
 
-const clear = () => {
-    document.getElementById('error').innerHTML = "";
-    document.getElementById('result').innerHTML = "";
-    document.getElementById('num').value = "";
-}
 const result = (integer) => {
-    var tenthPosition = parseFloat(integer).toFixed(1);
-    var hundredthsPosition = parseFloat(integer).toFixed(2);
-    var thousandthsPosition = parseFloat(integer).toFixed(3);
+    var tenths = parseFloat(integer).toFixed(1);
+    var hundredths = parseFloat(integer).toFixed(2);
+    var thousandths = parseFloat(integer).toFixed(3);
     document.getElementById('result').innerHTML = `
     
-    A) Nearest Integer: ${Math.round(integer)}
-    B) Square Root: ${parseInt(Math.sqrt(integer))}
-    C) Tenths Position: ${tenthPosition}
-    D) Hundredths Position: ${hundredthsPosition}
-    E) Thousandths Position: ${thousandthsPosition}`
+     Nearest Integer: ${Math.round(integer)}
+     Square Root: ${parseInt(Math.sqrt(integer))}
+     Tenths Position: ${tenths}
+     Hundredths Position: ${hundredths}
+     Thousandths Position: ${thousandths}`
     
     document.getElementById('num').value = "";
     }
