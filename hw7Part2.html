@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS 114</title>
+    <h1>Cookies</h1>
+</head>
+<style>
+    input {text-align: center;}
+    body {background-color: #f5f5dc;}
+    .body { width: 550px; margin: 0px auto;}   
+  </style>
+<script>
+    function setCookie(cookieNam,cookieValue,days) {
+      const data = new Date();
+      data.setTime(data.getTime() + (days*24*60*60*1000));
+      let expires = "expires=" + data.toGMTString();
+      document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cookieName) {
+      let name = cookieName + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let crumbs = decodedCookie.split(';');
+      for(let i = 0; i < crumbs.length; i++) {
+        let cook = crumbs[i];
+        while (cook.charAt(0) == ' ') {
+          cook = cook.substring(1);
+        }
+        if (cook.indexOf(name) == 0) {
+          return cook.substring(name.length, cook.length);
+        }
+      }
+      return "";
+    }
+    
+    function checkCookie() {
+      let user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+         user = prompt("Please enter your name:","");
+         if (user != "" && user != null) {
+           setCookie("username", user, 30);
+         }
+      }
+    }
+    </script>
+    
+    <body onload="checkCookie()"></body>
+</html>
