@@ -16,7 +16,7 @@ body {background-color: #f5f5dc;}
 
 <button type="button" onclick="myFunction()">Set background color</button> <br><br>
 
-<div class="example">
+<div class="css">
 <p>Font Family String</p>
 </div>
 
@@ -24,7 +24,7 @@ body {background-color: #f5f5dc;}
 <label><input id="timesnewroman" type="radio" name="family" />Times New Roman</label>
 <label><input id="courier" type="radio" name="family" />Courier</label> <br><br>
 
-<div class="example">
+<div class="css">
 <p>Font Size String</p>
 </div>
 
@@ -32,7 +32,7 @@ body {background-color: #f5f5dc;}
 <label><input id="48pt" type="radio" name="size" />Big</label>
 <label><input id="60pt" type="radio" name="size" />Bigger</label> <br><br>
 
-<div class="example">
+<div class="css">
    <p>Font Weight String</p>
 </div>
 
@@ -52,7 +52,7 @@ elements[i].addEventListener('click', fontFamilyChange, false);
 }
 
 function fontFamilyChange(){
-   var display = document.getElementsByClassName("example");
+   var display = document.getElementsByClassName("css");
    display[0].style.fontFamily = this.id;
 }
 
@@ -63,12 +63,12 @@ elements1[i].addEventListener('click', fontSizeChange, false);
 }
 
 function fontSizeChange(){
-   var display = document.getElementsByClassName("example");
+   var display = document.getElementsByClassName("css");
    display[1].style.fontSize = this.id;
 }
 
 function boldText(checkBox){
-   var display = document.getElementsByClassName("example");
+   var display = document.getElementsByClassName("css");
    if(checkBox.checked){
        display[2].style.fontWeight = "bold";
     }
@@ -78,7 +78,7 @@ function boldText(checkBox){
 }
 
 function italicText(checkBox){
-   var display = document.getElementsByClassName("example");
+   var display = document.getElementsByClassName("css");
    if(checkBox.checked){
        display[2].style.fontStyle = "italic";
     }
