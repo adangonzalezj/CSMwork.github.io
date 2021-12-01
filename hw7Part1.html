@@ -13,6 +13,33 @@ body {background-color: #f5f5dc;}
 .body { width: 550px; margin: 0px auto;}   
 </style>
     
+<body>
+
+<button type="button" onclick="myFunction()">Set background color</button> <br><br>
+
+<div class="css">
+<p>Font Family String</p>
+</div>
+
+<label><input id="arial" type="radio" name="family" />Arial</label>
+<label><input id="timesnewroman" type="radio" name="family" />Times New Roman</label>
+<label><input id="courier" type="radio" name="family" />Courier</label> <br><br>
+
+<div class="css">
+<p>Font Size String</p>
+</div>
+
+<label><input id="36pt" type="radio" name="size" />Medium</label>
+<label><input id="48pt" type="radio" name="size" />Big</label>
+<label><input id="60pt" type="radio" name="size" />Bigger</label> <br><br>
+
+<div class="css">
+   <p>Font Weight String</p>
+</div>
+
+<label><input type="checkbox" onclick="boldText(this)">Bold</label>
+<label><input type="checkbox" onclick="italicText(this)">Italic</label>
+    
 <script>
 
 function myFunction() {
@@ -63,35 +90,9 @@ function italicText(checkBox){
 
 </script>
     
-<body>
-
-<button type="button" onclick="myFunction()">Set background color</button> <br><br>
-
-<div class="css">
-<p>Font Family String</p>
-</div>
-
-<label><input id="arial" type="radio" name="family" />Arial</label>
-<label><input id="timesnewroman" type="radio" name="family" />Times New Roman</label>
-<label><input id="courier" type="radio" name="family" />Courier</label> <br><br>
-
-<div class="css">
-<p>Font Size String</p>
-</div>
-
-<label><input id="36pt" type="radio" name="size" />Medium</label>
-<label><input id="48pt" type="radio" name="size" />Big</label>
-<label><input id="60pt" type="radio" name="size" />Bigger</label> <br><br>
-
-<div class="css">
-   <p>Font Weight String</p>
-</div>
-
-<label><input type="checkbox" onclick="boldText(this)">Bold</label>
-<label><input type="checkbox" onclick="italicText(this)">Italic</label>
-    
     
     <p><a href="index.html">Main Page</a>
     <p><a href="hw7.html">Assignment 7</a>
     <p><a href="hw7Part2.html">Assignment 7 Part 2</a>
+        
 </html>
