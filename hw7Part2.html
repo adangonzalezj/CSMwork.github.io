@@ -22,7 +22,7 @@
     
     function getCookie(cookieName) {
       let name = cookieName + "=";
-      let decodedCookie = decodeURIComponent(document.cookie);
+      let decodedCookie = decodeURI(document.cookie);
       let crumbs = decodedCookie.split(';');
       for(let i = 0; i < crumbs.length; i++) {
         let cook = crumbs[i];
